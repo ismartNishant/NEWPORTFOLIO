@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Aladin&family=Bebas+Neue&family=Fredoka+One&family=Kaushan+Script&family=Monoton&family=Pacifico&family=Pattaya&family=Roboto:ital,wght@1,900&family=Suez+One&display=swap");
+/* font-family: 'Aladin', cursive;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Pattaya', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Suez One', serif;*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bgcolor: #000000;
+  --text-color: #fff;
+  --seccolor: #5a5c5b;
+  --maincolor: #dd0735;
+  --second: #09000e;
+  --third: #380202;
+  --body-bg: #181616;
+  --box-bg: #221f1f;
+  --text-color: #ffffff;
+}
+
+/*
+===================
+   Menubar 
+===================
+*/
+.hamburger-menu {
+  --size: 30px;
+  height: var(--size);
+  width: var(--size);
+  cursor: pointer;
+  z-index: 101;
+  position: relative;
+  display: none;
+  align-items: center;
+}
+.hamburger {
+  position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: var(--size);
+  height: 3px;
+  border-radius: 0.5rem;
+  background-color: var(--maincolor);
+  transition: 0.4s;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.hamburger::before {
+  top: -10px;
+}
+.hamburger::after {
+  bottom: -10px;
+}
+.hamburger-menu.active .hamburger {
+  background-color: transparent;
+}
+.hamburger-menu.active .hamburger::before {
+  transform-origin: top left;
+  transform: rotate(45deg);
+  left: 6px;
+  background-color: var(--bgcolor);
+}
+.hamburger-menu.active .hamburger::after {
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+  left: 6px;
+  background-color: var(--bgcolor);
+}
+/*
+===================
+   Navbar 
+===================
+*/
+.navbar-brand{
+  color: var(--maincolor);
+  font-size: 3em;
+  font-family: "Fredoka One", cursive;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+ .navigation {
+  position: relative;
+}
+ .navigation a {
+  color: var(--bgcolor) !important;
+  font-size: 1.3em;
+  font-weight: 500;
+  text-decoration: none;
+}
+ .navigation a::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  background: var(--maincolor);
+  position: absolute;
+  bottom: 0px;
+  transition: 0.8s;
+}
+ .navigation a:hover::before {
+  content: "";
+  width: 40px;
+  height: 4px;
+}
+
+/*
+===================
+   scrollbutton 
+===================
+*/
+.scrollToTop-btn {
+  z-index: 999;
+  position: fixed;
+  color: var(--text-color);
+  right: 0;
+  bottom: 15px;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.scrollToTop-btn i {
+  font-size: 1.8rem;
+  background: var(--maincolor);
+  padding: 0.6rem 1rem;
+}
+.scrollToTop-btn:hover {
+  bottom: 20px;
+}
+.scrollToTop-btn.active {
+  right: 20px;
+  opacity: 1;
+  pointer-events: auto;
+}
+@media only screen and (max-width: 1000px) {
+  .navbar-brand{
+    font-size: 5rem;
+  }
+ 
+  .scrollToTop-btn i {
+    font-size: 4rem;
+    padding: 0.8rem 1.7rem;
+  }
+  .hamburger-menu {
+    display: grid;
+  }
+  .navbar-nav{
+    display: none;
+  }
+  .navbar-nav.active{
+    display: flex;
+    justify-content: center;
+    z-index: 888;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    transition: 0.3s ease;
+  }
+}@media only screen and (max-width: 800px) {
+  .scrollToTop-btn i {
+    font-size: 3rem;
+    padding: 0.6rem 1.4rem;
+  }
+  .navbar-brand{
+    font-size: 3rem;
+  }
+ 
+}
+@media only screen and (max-width: 600px) {
+  .navbar-brand{
+    font-size: 2rem;
+  }
+  .scrollToTop-btn {
+    right: 15px !important;
+    bottom: 10px !important;
+  }
+  .scrollToTop-btn i {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .scrollToTop-btn {
+    right: 10px !important;
+    bottom: 3px !important;
+  }
+  .scrollToTop-btn i {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+}

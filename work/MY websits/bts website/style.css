@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Satisfy&display=swap');
+/* font-family: 'Kaushan Script', cursive;
+font-family: 'Satisfy', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+@font-face{
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/BOOTERFZ.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+/*
+======================
+ Header section
+======================
+ */
+.main-header{
+    color: whitesmoke;
+    background-image: url("images/b1.jpg");
+    background-size: cover;
+    background-color: rgba(0,0,0,-6);
+    background-blend-mode: multiply;
+    padding-bottom: 12em;
+   margin-bottom: 2rem;
+}
+.main-nav{
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+}
+.main-nav ul{
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+    justify-content: center;
+}
+.main-nav ul li{
+    margin: .5rem 3rem;
+}
+.main-nav ul li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #7811cc;
+    padding: 0rem 1rem;
+    font-family: 'Kaushan Script', cursive;
+    transition: all .5s ease-in-out;
+}
+.main-nav ul li a:hover{
+    border: 1px solid #7811cc;
+    color: #000;
+    box-shadow: 0px 0px 10px #7811cc;
+}
+.band-name{
+    position: relative;
+    top:2rem;
+    text-align: center;
+    font-size: 8rem;
+    color: #7811cc86;
+    font-family: "Booter - Zero Zero";
+}
+.logo-name{
+    font-size: 6rem;
+    padding-right: 2rem;
+    color: #020003bd;
+    font-family: "Booter - Zero Zero";
+}
+/* 
+============================
+      Main containent
+============================
+*/
+section{
+    padding: 2rem 0rem;
+    border-bottom: 3px solid #5f5f5f;
+}
+.content-section{
+    margin: 1em;
+}
+.content-section p{
+    line-height: 1.5rem;
+}
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5em;
+}
+.section-header{
+    position: relative;
+    font-family: 'Metal Mania', cursive;
+    letter-spacing: 1px;
+    padding-left: 2rem;
+    background: #a357e017;
+    border-left:  4px solid #7811cc;
+    font-weight: normal;
+    text-align: left;
+    font-size: 2.5em;
+    margin:2.5rem 0rem 1rem 0rem;
+}
+.about-band-image{
+    float: left;
+    height: 250px;
+    width: 280px;
+    margin: 15px;
+    border-radius: 50%;
+
+}
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+}
+.btn-header{
+  margin: 0.5em 6% 0em 6%;
+    color: white;
+    padding: .5em 1.2em;
+    font-weight: lighter;
+    font-size: 1.5em;
+    background: rgba(226, 228, 231, 0.15);
+    border: 3px solid #9809eb;
+}
+.btn-header:hover{
+    background: rgba(239, 245, 247, 0.411);
+    color: #b307f7;
+}
+.btn-play{
+    position: relative;
+    top:2.5em;
+    display: block;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    color: #f3f1f5;
+    font-size: 3.5em;
+    padding: 0px 0px 0px 10px;
+    width: 70px;
+    border-radius: 50%;
+    height: 70px;
+}
+/*
+==============================
+        tour section      
+==============================
+*/
+.tour-row{
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+.tour-row:last-child{
+    border-bottom: none;
+}
+.tour-item{
+    display: inline-block;
+    padding-right: .5em;
+}
+.tour-date{
+    color: #555;
+    font-weight: bold;
+    width: 11%;
+}
+.tour-city{
+    width: 24%;
+}
+.tour-arena{
+    width: 42%;
+}
+.tour-btn{
+    max-width: 19%;
+}
+.btn-primary{
+    color: #ffffff;
+    background-color: #7811cc;
+    border: none;
+    font-weight: bold;
+    border-radius: .5em;
+}
+.btn-primary:hover{
+   
+    background:linear-gradient(45deg,#0d61c2,#45cadf);
+}
+
+/*
+============================
+      shop section
+============================
+*/
+.shop-item{
+    margin: 30px;
+}
+.shop-item-title{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #be2ddb;
+}
+.shop-item-img{
+    height: 250px;
+    width: 300px;
+    border: 3px solid #69696936;
+    box-shadow: 5px 5px 15px 0px #a2a3a3;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+.shop-item-img:hover{
+    height: 260px;
+    width: 310px;
+
+}
+.shop-item-details{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.shop-item-price{
+    flex-grow: 1;
+}
+.shop-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*
+==================
+ footer section   
+==================
+*/
+.footer-ul{
+    margin-left: 3rem !important;
+    margin-top: 1rem;
+}
+.main-footer{
+    background-color: #8a08f5;
+    color: white;
+    padding: .25em 0 !important;
+}
+footer li{
+    list-style: none;
+    display: inline;
+}
+
+.footer-ul i{
+    font-size: 4em;
+    transition: all .5s ease-in-out;
+    color:white;  
+}
+.footer-ul i:hover{
+    color:#000;
+transform: scale(1.1);
+}
+.main-footer-container{
+    display: flex;
+}
